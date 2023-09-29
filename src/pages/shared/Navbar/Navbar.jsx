@@ -1,8 +1,21 @@
-import { Link, NavLink } from "react-router-dom";
-import { FaRegUserCircle, FaShoppingCart } from "react-icons/fa"
+import {  Link, NavLink } from "react-router-dom";
+import { FaRegUserCircle } from "react-icons/fa";
+import useAuth from "../../../Hooks/useAuth";
 
 const Navbar = () => {
-    
+  
+  const { user,  logOut } = useAuth();
+  
+  // Log Out Handle
+  const handleLogOut = () => {
+    logOut()
+      .then()
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  // Header item
     const navOption = (
         <div className="items-center md:flex">
           <li>
@@ -20,14 +33,14 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to="/instructors"
+              to="/courses"
               className={({ isActive }) =>
                 isActive
                   ? "font-medium tracking-wide transition-colors duration-200 border px-2 rounded-md border-zinc-400 shadow-2xl bg-cyan-700 text-xl"
                   : "hover:text-green-500 font-medium text-xl"
               }
             >
-              Instructors
+              Courses
             </NavLink>
           </li>
           <li>
@@ -39,7 +52,7 @@ const Navbar = () => {
                   : "hover:text-green-500 font-medium text-xl"
               }
             >
-              All Class
+              Instructors
             </NavLink>
           </li>
           {/* {isAdmin ? (
@@ -71,8 +84,7 @@ const Navbar = () => {
 
     
     return (
-        <div >
-        {/* <div className={`fixed z-10 max-w-screen-xl  navbar ${darkmod? "bg-gray-900 text-white" : ' text-black bg-white'}`}> */}
+        <div className="z-10 max-w-screen-xl bg-pink-700 navbar" >
           <div className="navbar-start">
             <div className="dropdown">
               <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -98,22 +110,19 @@ const Navbar = () => {
                 {navOption}
               </ul>
             </div>
-            {/* <div className="flex items-center gap-2">
-              <img src={logo} alt="" className="w-14" />
+            <div className="flex items-center gap-2">
+              {/* <img src={logo} alt="" className="w-14" /> */}
               <h1 className="hidden text-2xl normal-case text-amber-500 md:block">
-                Playfit
+                Learning
               </h1>
-            </div> */}
+            </div>
           </div>
           <div className="hidden navbar-center lg:flex">
             <ul className="px-1 menu menu-horizontal">{navOption}</ul>
           </div>
-          {/* <div onClick={() => setDarkmod(!darkmod)} className="text-4xl">
-            {darkmod ? <MdDarkMode /> : <BsSunFill />}
-          </div> */}
           <div className="navbar-end">
             <div className="flex items-center gap-2 md:gap-4 md:mx-10 md:text-xl">
-              {/* {user ? (
+              {user ? (
                 <>
                   <div className="flex items-center gap-2 ">
                     <div
@@ -130,13 +139,13 @@ const Navbar = () => {
                 <div className="ml-5 ">
                   <FaRegUserCircle size={46}></FaRegUserCircle>
                 </div>
-              )} */}
+              )}
             </div>
-            {/* <div>
+            <div>
               {user ? (
                 <>
                   <button
-                    onClick={handleLogOut}
+                     onClick={handleLogOut}
                     className="text-xl btn btn-ghost"
                   >
                     LogOut
@@ -149,7 +158,7 @@ const Navbar = () => {
                   </Link>
                 </div>
               )}
-            </div> */}
+            </div>
           </div>
         </div>
       
@@ -157,4 +166,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;;
+export default Navbar;

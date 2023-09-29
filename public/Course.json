@@ -1,0 +1,338 @@
+[
+{
+    "course_name": "Artificial Intelligence Fundamentals",
+    "category": "AI",
+    "rating": 5,
+    "enrolled_students": 100,
+    "price": 150,
+    "syllabus_info": "This course covers the basics of AI, including machine learning, neural networks, and natural language processing.",
+    "reviews": [
+      {
+        "user": "Student123",
+        "rating": 5,
+        "comment": "Excellent course, highly recommended!"
+      },
+      {
+        "user": "TechGuru",
+        "rating": 4,
+        "comment": "Great introduction to AI concepts."
+      }
+    ],
+    "course_logo_image": "https://i.postimg.cc/6Q1WwZGX/Untitled-design-8.png",
+    "instructor_details": {
+      "instructor_name": "Samuel",
+      "instructor_image": "https://i.postimg.cc/43nG832F/Untitled-design-17.png",
+      "qualification": "Ph.D. in Artificial Intelligence",
+      "experience": "10+ years of AI research and teaching",
+      "course_duration": "8 weeks"
+    }
+  },
+  {
+    "course_name": "Machine Learning Fundamentals",
+    "category": "AI",
+    "rating": 4,
+    "enrolled_students": 90,
+    "price": 140,
+    "syllabus_info": "Introduction to machine learning concepts, algorithms, and applications.",
+    "reviews": [
+      {
+        "user": "MLExplorer",
+        "rating": 4,
+        "comment": "Good course to start with ML."
+      },
+      {
+        "user": "DataWhiz",
+        "rating": 3,
+        "comment": "Decent content but could be more in-depth."
+      }
+    ],
+    "course_logo_image": "https://i.postimg.cc/MTMWGGyj/Untitled-design-9.png",
+    "instructor_details": {
+      "instructor_name": "Mathew",
+      "instructor_image": "https://i.postimg.cc/mrqsKG0Z/Untitled-design-18.png",
+      "qualification": "Machine Learning Engineer",
+      "experience": "8+ years in ML research and development",
+      "course_duration": "8 weeks"
+    }
+  },
+  {
+    "course_name": "Python Programming Basics",
+    "category": "Development",
+    "rating": 5,
+    "enrolled_students": 75,
+    "price": 120,
+    "syllabus_info": "Learn the fundamentals of Python programming, including variables, loops, and functions.",
+    "reviews": [
+      {
+        "user": "CodeMaster",
+        "rating": 5,
+        "comment": "Great course for beginners!"
+      },
+      {
+        "user": "PythonPro",
+        "rating": 4,
+        "comment": "Helped me get started with Python."
+      }
+    ],
+    "course_logo_image": "https://i.postimg.cc/ydkNSjzx/Untitled-design-4.png",
+    "instructor_details": {
+      "instructor_name": "Razia Chowdhary",
+      "instructor_image": "https://i.postimg.cc/bYnycsy7/Untitled-design-15.png",
+      "qualification": "Python Developer",
+      "experience": "7+ years in Python programming",
+      "course_duration": "6 weeks"
+    }
+  },
+  {
+    "course_name": "Data Entry Mastery",
+    "category": "Data Entry",
+    "rating": 4,
+    "enrolled_students": 85,
+    "price": 120,
+    "syllabus_info": "Learn efficient data entry techniques, keyboard shortcuts, and accuracy tips.",
+    "reviews": [
+      {
+        "user": "DataEntryWhiz",
+        "rating": 4,
+        "comment": "Useful course for improving data entry skills."
+      },
+      {
+        "user": "ExcelMaster",
+        "rating": 3,
+        "comment": "Helped me become faster at data entry."
+      }
+    ],
+    "course_logo_image": "https://i.postimg.cc/3JgxpWzX/sci.png",
+    "instructor_details": {
+      "instructor_name": "Smith",
+      "instructor_image": "https://i.postimg.cc/Z5wZFNHd/Untitled-design-16.png",
+      "qualification": "Data Entry Specialist",
+      "experience": "12+ years in data entry",
+      "course_duration": "6 weeks"
+    }
+  },
+  {
+    "course_name": "Data Science Essentials",
+    "category": "Data Science",
+    "rating": 5,
+    "enrolled_students": 95,
+    "price": 140,
+    "syllabus_info": "Introduction to data science, data analysis, and statistical techniques.",
+    "reviews": [
+      {
+        "user": "DataGeek",
+        "rating": 5,
+        "comment": "A great starting point for data science enthusiasts."
+      },
+      {
+        "user": "DataDriven",
+        "rating": 4,
+        "comment": "Very informative course."
+      }
+    ],
+    "course_logo_image": "https://i.postimg.cc/8PBTc9rw/Untitled-design-11.png",
+    "instructor_details": {
+      "instructor_name": "Katherine",
+      "instructor_image": "https://i.postimg.cc/GtvdkSgL/Untitled-design-13.png",
+      "qualification": "Ph.D. in Data Science",
+      "experience": "8+ years in data science research",
+      "course_duration": "8 weeks"
+    }
+  },
+  {
+    "course_name": "iOS App Development",
+    "category": "App",
+    "rating": 4,
+    "enrolled_students": 90,
+    "price": 130,
+    "syllabus_info": "Learn iOS app development using Swift and Xcode, and build your own apps.",
+    "reviews": [
+      {
+        "user": "iOSDevPro",
+        "rating": 4,
+        "comment": "Great course to start with iOS development."
+      },
+      {
+        "user": "AppEnthusiast",
+        "rating": 3,
+        "comment": "Decent content, could have more projects."
+      }
+    ],
+    "course_logo_image": "https://i.postimg.cc/HnMs6LnC/Untitled-design-3.png",
+    "instructor_details": {
+      "instructor_name": "Samuel",
+      "instructor_image": "https://i.postimg.cc/43nG832F/Untitled-design-17.png",
+      "qualification": "iOS Developer",
+      "experience": "7+ years in iOS app development",
+      "course_duration": "10 weeks"
+    }
+  },
+  {
+    "course_name": "UI/UX Design for Mobile Apps",
+    "category": "UI UX",
+    "rating": 5,
+    "enrolled_students": 80,
+    "price": 140,
+    "syllabus_info": "Master the principles of mobile app UI/UX design for both iOS and Android.",
+    "reviews": [
+      {
+        "user": "MobileDesignPro",
+        "rating": 5,
+        "comment": "Excellent course for mobile app design."
+      },
+      {
+        "user": "DesignEnthusiast",
+        "rating": 4,
+        "comment": "Instructor provides practical insights."
+      }
+    ],
+    "course_logo_image": "https://i.postimg.cc/6pc6jgWT/Untitled-design-6.png",
+    "instructor_details": {
+      "instructor_name": "Jade",
+      "instructor_image": "https://i.postimg.cc/L6MHH2hn/Untitled-design-14.png",
+      "qualification": "UI/UX Designer",
+      "experience": "9+ years in mobile app design",
+      "course_duration": "8 weeks"
+    }
+  },
+  {
+    "course_name": "Web Development Bootcamp",
+    "category": "Development",
+    "rating": 4,
+    "enrolled_students": 100,
+    "price": 150,
+    "syllabus_info": "A comprehensive web development bootcamp covering HTML, CSS, JavaScript, and more.",
+    "reviews": [
+      {
+        "user": "CodeNinja",
+        "rating": 5,
+        "comment": "Best web development course I've taken!"
+      },
+      {
+        "user": "WebDesignPro",
+        "rating": 4,
+        "comment": "Excellent hands-on exercises and projects."
+      }
+    ],
+    "course_logo_image": "https://i.postimg.cc/wjgTkgdS/Untitled-design-5.png",
+    "instructor_details": {
+      "instructor_name": "Mathew",
+      "instructor_image": "https://i.postimg.cc/mrqsKG0Z/Untitled-design-18.png",
+      "qualification": "Full-stack Developer",
+      "experience": "15+ years in web development",
+      "course_duration": "10 weeks"
+    }
+  },
+  {
+    "course_name": "Mobile App Development with Flutter",
+    "category": "App",
+    "rating": 4,
+    "enrolled_students": 100,
+    "price": 150,
+    "syllabus_info": "Learn mobile app development using Flutter framework for both iOS and Android.",
+    "reviews": [
+      {
+        "user": "AppDevEnthusiast",
+        "rating": 4,
+        "comment": "Great course for aspiring app developers!"
+      },
+      {
+        "user": "MobileWizard",
+        "rating": 5,
+        "comment": "Flutter is the future of app development."
+      }
+    ],
+    "course_logo_image": "https://i.postimg.cc/gcLJzgDB/Untitled-design-2.png",
+    "instructor_details": {
+      "instructor_name": "Jade",
+      "instructor_image": "https://i.postimg.cc/L6MHH2hn/Untitled-design-14.png",
+      "qualification": "Mobile App Developer",
+      "experience": "8+ years in mobile app development",
+      "course_duration": "6 weeks"
+    }
+  },
+  {
+    "course_name": "UI/UX Design Essentials",
+    "category": "UI UX",
+    "rating": 5,
+    "enrolled_students": 100,
+    "price": 150,
+    "syllabus_info": "Master the principles of user interface and user experience design.",
+    "reviews": [
+      {
+        "user": "DesignFanatic",
+        "rating": 5,
+        "comment": "Excellent course for aspiring UI/UX designers."
+      },
+      {
+        "user": "UserExperiencePro",
+        "rating": 4,
+        "comment": "Instructor provides great insights into UI/UX design."
+      }
+    ],
+    "course_logo_image": "https://i.postimg.cc/pddWgCrC/Untitled-design-7.png",
+    "instructor_details": {
+      "instructor_name": "Smith",
+      "instructor_image": "https://i.postimg.cc/Z5wZFNHd/Untitled-design-16.png",
+      "qualification": "UI/UX Designer",
+      "experience": "12+ years in UI/UX design",
+      "course_duration": "8 weeks"
+    }
+  },
+  {
+    "course_name": "Data Science and Machine Learning",
+    "category": "Data Science",
+    "rating": 5,
+    "enrolled_students": 100,
+    "price": 150,
+    "syllabus_info": "Explore data science concepts and machine learning algorithms with hands-on projects.",
+    "reviews": [
+      {
+        "user": "DataGeek",
+        "rating": 5,
+        "comment": "Great course with practical applications."
+      },
+      {
+        "user": "MachineLearningPro",
+        "rating": 5,
+        "comment": "This course helped me advance my career in data science."
+      }
+    ],
+    "course_logo_image": "https://i.postimg.cc/XYj4CLfW/Untitled-design-12.png",
+    "instructor_details": {
+      "instructor_name": "Katherine",
+      "instructor_image": "https://i.postimg.cc/GtvdkSgL/Untitled-design-13.png",
+      "qualification": "Ph.D. in Data Science",
+      "experience": "10+ years in data science research",
+      "course_duration": "12 weeks"
+    }
+  },
+  {
+    "course_name": "Data Entry and Excel Mastery",
+    "category": "Data Entry",
+    "rating": 4,
+    "enrolled_students": 100,
+    "price": 150,
+    "syllabus_info": "Learn efficient data entry techniques and become an Excel pro.",
+    "reviews": [
+      {
+        "user": "DataEntryWhiz",
+        "rating": 4,
+        "comment": "Great course for improving data entry skills."
+      },
+      {
+        "user": "ExcelMaster",
+        "rating": 4,
+        "comment": "Useful tips for Excel users."
+      }
+    ],
+    "course_logo_image": "https://i.postimg.cc/nzyn9tkS/Untitled-design-10.png",
+    "instructor_details": {
+      "instructor_name": "Razia",
+      "instructor_image": "https://i.postimg.cc/bYnycsy7/Untitled-design-15.png",
+      "qualification": "Data Entry Specialist",
+      "experience": "10+ years in data entry",
+      "course_duration": "6 weeks"
+    }
+  }
+]
