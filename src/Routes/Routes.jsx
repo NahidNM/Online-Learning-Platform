@@ -10,6 +10,7 @@ import Course from "../pages/Course/Course";
 import Instructor from "../pages/Intructor/Instructor";
 import MyCourse from "../pages/Dashboard/MyCourse";
 import Dashboard from "../Layout/Dashboard";
+import EnrollCourse from "../pages/Dashboard/EnrollCourse";
 
 
  export const router = createBrowserRouter([
@@ -47,6 +48,10 @@ import Dashboard from "../Layout/Dashboard";
           {
             path: 'mycourse',
             element: <MyCourse></MyCourse>
+          },
+          {
+            path: 'enrollCourse',
+            element: <EnrollCourse></EnrollCourse>
           }
         ]
       }

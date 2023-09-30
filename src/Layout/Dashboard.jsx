@@ -62,7 +62,7 @@ const Dashboard = () => {
                                       <span className="badge inl badge-secondary">+{cart?.length || 0}</span>
                                   </NavLink>
                               </li>
-                              <li><NavLink to="/dashboard/enrollclass"><FaWallet></FaWallet> Enroll Class
+                              <li><NavLink to="/dashboard/enrollCourse"><FaWallet></FaWallet> Enroll Class
                               {/* <span className="badge inl badge-secondary">+{enrollClasses?.length || 0}</span> */}
                               </NavLink></li>
                               <li><NavLink to="/dashboard/payhistory"><FaWallet></FaWallet> Payment History</NavLink></li>

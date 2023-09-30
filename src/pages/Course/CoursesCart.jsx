@@ -42,7 +42,7 @@ const CoursesCart = (props) => {
             category,
             price,
             instructor_details,
-            
+            enrolled_students,
             course_name,
           };
       fetch("http://localhost:4000/cart", {
@@ -85,30 +85,6 @@ const CoursesCart = (props) => {
 
 
   return (
-    // <div className="shadow-xl card md:w-80 bg-sky-200 ">
-    //   <figure>
-    //     <img className="pt-5 rounded-lg" src={course_logo_image} alt="Shoes" />
-    //   </figure>
-    //   <p className="absolute right-0 px-4 mt-4 mr-4 text-white rounded-md bg-slate-900">
-    //     ${price}
-    //   </p>
-
-    //   <div className="text-black card-body">
-    //     <h2 className="card-title">{course_name}</h2>
-    //     <div className="flex items-center gap-3">
-    //       <p>Instructor : {category}</p>
-    //       <p>Enroll : {enrolled_students}</p>
-    //     </div>
-    //     <p>Seats : {syllabus_info}</p>
-
-    //     <button
-    //       onClick={() => handleLesson()}
-    //       className="pt-4 bg-indigo-600 border-0 border-b-4 border-orange-400 btn btn-outline card-actions"
-    //     >
-    //       Add to Course
-    //     </button>
-    //   </div>
-    // </div>
     <div className="flex flex-col gap-2 px-5 py-5 text-gray-700 bg-cyan-400 rounded-2xl">
     <img className="w-96 rounded-t-2xl" src={course_logo_image} alt="" />
     <div className="flex justify-between ">
@@ -120,7 +96,7 @@ const CoursesCart = (props) => {
           size={20}
           color2={"#ffd700"}
         />
-        <h1>({reviews.length})</h1>
+        <h1>({reviews?.length})</h1>
       </div>
       <h1 className="text-xl font-bold ">{price}$</h1>
     </div>
