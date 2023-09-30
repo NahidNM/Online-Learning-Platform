@@ -26,7 +26,7 @@ const Course = () => {
   
   
   useEffect(() => {
-    fetch("http://localhost:5000/course")
+    fetch("http://localhost:4000/course")
       .then((res) => res.json())
       .then((data) => {
         setAllCoures(data);

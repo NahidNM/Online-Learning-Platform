@@ -1,10 +1,13 @@
 import {  Link, NavLink } from "react-router-dom";
-import { FaRegUserCircle } from "react-icons/fa";
+import { FaRegUserCircle, FaShoppingCart } from "react-icons/fa";
 import useAuth from "../../../Hooks/useAuth";
+import useCart from "../../../Hooks/useCart";
 
 const Navbar = () => {
   
   const { user,  logOut } = useAuth();
+  const [cart] = useCart();
+  console.log(cart)
   
   // Log Out Handle
   const handleLogOut = () => {
@@ -77,6 +80,15 @@ const Navbar = () => {
               </button>
             </Link>
           </li> */}
+          
+            <li>
+            <Link to="/">
+              <button className="gap-2 btn-secondary btn">
+                <FaShoppingCart></FaShoppingCart>
+                <div className="badge badge-secondary">+{cart?.length || 0}</div>
+              </button>
+            </Link>
+          </li> 
         </div>
       );
     

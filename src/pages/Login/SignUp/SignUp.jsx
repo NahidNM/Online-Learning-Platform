@@ -30,59 +30,59 @@ const Signup = () => {
                 updateUserProfile(data.name, data.photoURL)
                 
                 
-                Swal.fire({
-                    position: 'center',
-                    icon: 'success',
-                    title: 'Successfully ',
-                    showConfirmButton: false,
-                    timer: 1500
-                  })
-                  navigate(from, { replace: true });
-                })
-                .catch((error) => {
-                  console.log(error.message);
-                  setError(error.message);
-                });  
+                // Swal.fire({
+                //     position: 'center',
+                //     icon: 'success',
+                //     title: 'Successfully ',
+                //     showConfirmButton: false,
+                //     timer: 1500
+                //   })
+                //   navigate(from, { replace: true });
+                // })
+                // .catch((error) => {
+                //   console.log(error.message);
+                //   setError(error.message);
+                // });  
                 
-                // .then(() => {
-                //     console.log('user profile update');
+                .then(() => {
+                    console.log('user profile update');
                     
-                //     const saveUser = {name: data.name, email: data.email}
+                    const saveUser = {name: data.name, email: data.email}
                     
-                //     fetch(' https://summer-sports-camp-server.vercel.app/users',{
-                //         method: 'POST',
-                //         headers: {
-                //             'content-type': 'application/json' 
-                //         },
-                //         body: JSON.stringify(saveUser)
+                    fetch('http://localhost:4000/users',{
+                        method: 'POST',
+                        headers: {
+                            'content-type': 'application/json' 
+                        },
+                        body: JSON.stringify(saveUser)
                         
-                //     })
-                //     .then(res => res.json())
-                //     .then(data => {
-                //         console.log(data)
-                //         if(data.insertedId){
-                //             setReload(Date.now());
-                //             reset()
-                //             Swal.fire({
-                //                 position: 'center',
-                //                 icon: 'success',
-                //                 title: 'Successfully registered',
-                //                 showConfirmButton: false,
-                //                 timer: 1000
-                //               })
-                //               navigate('/');
-                //         }
-                //     })
-                //     navigate(from, { replace: true });
+                    })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        if(data.insertedId){
+                            setReload(Date.now());
+                            reset()
+                            Swal.fire({
+                                position: 'center',
+                                icon: 'success',
+                                title: 'Successfully registered',
+                                showConfirmButton: false,
+                                timer: 1000
+                              })
+                              navigate('/');
+                        }
+                    })
+                    navigate(from, { replace: true });
                     
                     
                     
-                //   });
-            // })
-            // .catch((Error) => {
-            //     console.log(Error);
-            //    setError(Error.message)
-            //   });
+                  });
+            })
+            .catch((Error) => {
+                console.log(Error);
+               setError(Error.message)
+              });
     };
 
     return (

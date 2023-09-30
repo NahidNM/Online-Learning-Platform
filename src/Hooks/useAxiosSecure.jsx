@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import useAuth from './useAuth';
 
 const axiosSecure = axios.create({
-    baseURL: 'http://localhost:5000/', 
+    baseURL: 'http://localhost:4000/', 
   });
 
 const useAxiosSecure = () => {
@@ -25,8 +25,8 @@ const useAxiosSecure = () => {
       (response) => response,
       async (error) => {
         if (error.response && (error.response.status === 401 || error.response.status === 403)) {
-          // await logOut();
-          // navigate('/login');
+          await logOut();
+          navigate('/login');
         }
         return Promise.reject(error);
       }

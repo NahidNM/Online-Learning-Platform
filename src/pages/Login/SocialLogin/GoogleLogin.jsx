@@ -31,18 +31,38 @@ const GoogleLogin = () => {
     //         })
     // }
     
-    const handleGoogleSignIn = () =>{
-        googleSignIn()
-        .then(result => {
-            const googleUser = result.user;
-            navigate(from, {replace: true})
-            // console.log(googleUser)
-        })
-        .catch(error =>{
-            console.log(error)
-        })
-    }
+    // const handleGoogleSignIn = () =>{
+    //     googleSignIn()
+    //     .then(result => {
+    //         const googleUser = result.user;
+    //         navigate(from, {replace: true})
+    //         // console.log(googleUser)
+    //     })
+    //     .catch(error =>{
+    //         console.log(error)
+    //     })
+    // }
     
+    
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+            .then(result => {
+                const loggedInUser = result.user;
+                console.log(loggedInUser);
+                const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email }
+                fetch('http://localhost:4000/users', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(saveUser)
+                })
+                    .then(res => res.json())
+                    .then(() => {
+                        navigate(from, { replace: true });
+                    })
+            })
+    }
     
     return (
         <div>
@@ -53,6 +73,9 @@ const GoogleLogin = () => {
     </div>
     );
 };
+
+
+
 
 export default GoogleLogin;
 
