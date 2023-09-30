@@ -11,6 +11,9 @@ const MyCourse = () => {
     
     const total = cart.reduce((sum, item) => item.price + sum, 0);
     
+    const { _id } = cart
+    console.log(_id);
+    
     const handleDelete = item => {
         Swal.fire({
             title: 'Are you sure?',
@@ -40,6 +43,55 @@ const MyCourse = () => {
         })
     }
     
+    
+    const handleEnroll = ()=>{
+        
+                const EnrollLesson = {
+                    classId: _id,
+                    email: user.email,
+                    rating,
+                    course_logo_image,
+                    syllabus_info,
+                    category,
+                    price,
+                    instructor_details,
+                    
+                    course_name,
+                  };
+              fetch("http://localhost:4000/enroll", {
+                method: "POST",
+                headers: {
+                  "content-type": "application/json",
+                },
+                body: JSON.stringify(EnrollLesson),
+              })
+                .then((res) => res.json())
+                .then((data) => {
+                  if (data.insertedId) {
+                    fetch(`http://localhost:4000/cart/${_id}`, {
+                        method: "DELETE"
+                    })
+                    .then(res => res.json())
+                    .then(data =>{
+                        if(data.deletedCount > 0){
+                            refetch();
+                            Swal.fire({
+                                position: "center",
+                                icon: "success",
+                                title: "Successfully Enrolled",
+                                showConfirmButton: false,
+                                timer: 1500,
+                              });
+                        }
+                    })
+                    
+                   
+                  }
+                });
+            
+            
+          };
+   
     return (
      
            <div className="w-full ">
@@ -86,7 +138,7 @@ const MyCourse = () => {
                                 </td>
                                 <td>
                                 <Link>
-                                  <button className="ml-3 text-white bg-orange-400 btn btn-ghost">Enroll</button>
+                                  <button onClick={()=>handleEnroll()}className="ml-3 text-white bg-orange-400 btn btn-ghost">Enroll</button>
                                       </Link>
                                 </td>
                             </tr>)
