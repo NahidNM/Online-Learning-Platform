@@ -8,6 +8,8 @@ import Login from "../pages/Login/Login/Login";
 import Signup from "../pages/Login/Signup/Signup";
 import Course from "../pages/Course/Course";
 import Instructor from "../pages/Intructor/Instructor";
+import MyCourse from "../pages/Dashboard/MyCourse";
+import Dashboard from "../Layout/Dashboard";
 
 
  export const router = createBrowserRouter([
@@ -35,6 +37,18 @@ import Instructor from "../pages/Intructor/Instructor";
           path: 'instructor',
           element: <Instructor></Instructor>
         }
-      ]
+        
+      ],
     },
+      {
+        path: 'dashboard',
+        element: <privateRoute><Dashboard></Dashboard></privateRoute>,
+        children: [
+          {
+            path: 'mycourse',
+            element: <MyCourse></MyCourse>
+          }
+        ]
+      }
+    
   ]);

@@ -16,17 +16,18 @@ const PopularCourse = () => {
 //    console.log(courses);
    
     return (
-        <div>
+        <div className="pt-5 pb-10">
             <div className="divider"></div>
   <div className="font-bold text-center text-blue-500 divider md:text-5xl">Popular class</div>
   <div className="divider"></div>
  
 <div className="grid gap-5 md:grid-cols-3">
   {
-        courses?.map((course) => <CoursesCart key={course._id} course={course}>
+        courses?.slice(0, 6)?.map((course) => <CoursesCart key={course._id} course={course}>
             </CoursesCart>
             )
      }
+     
 </div>
           
         </div>

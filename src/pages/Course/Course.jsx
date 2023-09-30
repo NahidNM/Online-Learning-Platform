@@ -30,18 +30,7 @@ const Course = () => {
       .then((res) => res.json())
       .then((data) => {
         setAllCoures(data);
-        setData(data);
-        
-        
-            // setAi(data.filter(da=>da.category=== "AI"));
-            // setUi(data.filter(da=>da.category=== "UI UX"));
-            // setDevelopment(data.filter(da=>da.category=== "Development"));
-            // setApp(data.filter(da=>da.category === "App"));
-            // setScience(data.filter(da=>da.category === "Data Science"));
-            // setEntry(data.filter(da=>da.category === "Data Entry"));
-          
-        
-        
+        setData(data);  
       });
   }, []);
   

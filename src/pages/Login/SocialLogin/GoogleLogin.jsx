@@ -49,7 +49,7 @@ const GoogleLogin = () => {
             .then(result => {
                 const loggedInUser = result.user;
                 console.log(loggedInUser);
-                const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email }
+                const saveUser = { name: loggedInUser.displayName, role:"user", email: loggedInUser.email }
                 fetch('http://localhost:4000/users', {
                     method: 'POST',
                     headers: {

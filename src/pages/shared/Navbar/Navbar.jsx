@@ -9,6 +9,9 @@ const Navbar = () => {
   const [cart] = useCart();
   // console.log(cart)
   
+  // const [isInstructor] = useVarifyInstructor();
+  // const [isInstructor] = true;
+  
   // Log Out Handle
   const handleLogOut = () => {
     logOut()
@@ -82,7 +85,7 @@ const Navbar = () => {
           </li> */}
           
             <li>
-            <Link to="/">
+            <Link to="/dashboard">
               <button className="gap-2 btn-secondary btn">
                 <FaShoppingCart></FaShoppingCart>
                 <div className="badge badge-secondary">+{cart?.length || 0}</div>
@@ -96,7 +99,7 @@ const Navbar = () => {
 
     
     return (
-        <div className="z-10 max-w-screen-xl bg-pink-700 navbar" >
+        <div className="z-10 max-w-screen-xl navbar bg-slate-300" >
           <div className="navbar-start">
             <div className="dropdown">
               <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -124,8 +127,8 @@ const Navbar = () => {
             </div>
             <div className="flex items-center gap-2">
               {/* <img src={logo} alt="" className="w-14" /> */}
-              <h1 className="hidden text-2xl normal-case text-amber-500 md:block">
-                Learning
+              <h1 className="hidden text-2xl font-bold normal-case text-amber-500 md:block">
+               E-Learning
               </h1>
             </div>
           </div>

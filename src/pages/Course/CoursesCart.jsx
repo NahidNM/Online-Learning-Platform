@@ -125,20 +125,25 @@ const CoursesCart = (props) => {
       <h1 className="text-xl font-bold ">{price}$</h1>
     </div>
     <h1 className="text-xl ">{course_name}</h1>
-    <h1 className="text-sm">Category: {category}</h1>
-    <h1 className="text-base">Enrolled: {enrolled_students}</h1>
+    <div className="flex items-center justify-between">
+    <h1 className="text-xl">Category: {category}</h1>
+    <h1 className="text-xl">Enrolled: {enrolled_students}</h1>
+    </div>
     <div className="flex items-center justify-between ">
       <div className="flex items-center gap-3 ">
         <img
-          className="w-16 p-1 border-2 border-blue-900 rounded-full "
+          className="p-1 border-2 border-blue-900 rounded-full w-14 "
           src={instructor_details.instructor_image}
           alt=""
         />
-        <h1>{instructor_details.instructor_name}</h1>
-      </div>
-      <button onClick={() => handleLesson()} className="btn btn-warning">
-        Add To Cart
-      </button>
+        <h1 className="font-bold">{instructor_details.instructor_name}</h1>
+      </div>  
+        <button
+         onClick={() => handleLesson()}
+          className="pt-4 bg-indigo-600 border-0 border-b-4 border-orange-400 btn btn-outline card-actions"
+        >
+         Add to Course
+         </button>    
     </div>
   </div>
   );

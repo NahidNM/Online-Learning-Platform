@@ -29,7 +29,7 @@ const instructorDetails = instuctors.filter((instructor)=>{
             <div className="divider"></div>
   <div className="font-bold text-center text-blue-500 divider md:text-5xl">Our Instructor</div>
   <div className="divider"></div>
-       <div className='grid gap-5 md:grid-cols-3'>
+       <div className='grid gap-5 md:ml-20 md:grid-cols-3'>
         {
            instructorDetails?.map((instuctorDetail) =>
            <InstructorCard key={instuctorDetail.instructor_name
