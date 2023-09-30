@@ -7,7 +7,7 @@ const Navbar = () => {
   
   const { user,  logOut } = useAuth();
   const [cart] = useCart();
-  console.log(cart)
+  // console.log(cart)
   
   // Log Out Handle
   const handleLogOut = () => {
@@ -48,7 +48,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to="/class"
+              to="/instructor"
               className={({ isActive }) =>
                 isActive
                   ? "font-medium tracking-wide  transition-colors duration-200 border px-2 rounded-md border-zinc-400 shadow-2xl bg-cyan-700 text-xl"

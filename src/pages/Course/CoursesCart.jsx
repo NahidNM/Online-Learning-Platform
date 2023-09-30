@@ -4,6 +4,7 @@ import useAuth from "../../Hooks/useAuth";
 import Swal from "sweetalert2";
 import { useLocation, useNavigate } from "react-router-dom";
 import useCart from "../../Hooks/useCart";
+import ReactStars from "react-stars";
 
 const CoursesCart = (props) => {
     
@@ -84,30 +85,62 @@ const CoursesCart = (props) => {
 
 
   return (
-    <div className="shadow-xl card md:w-80 bg-sky-200 ">
-      <figure>
-        <img className="pt-5 rounded-lg" src={course_logo_image} alt="Shoes" />
-      </figure>
-      <p className="absolute right-0 px-4 mt-4 mr-4 text-white rounded-md bg-slate-900">
-        ${price}
-      </p>
+    // <div className="shadow-xl card md:w-80 bg-sky-200 ">
+    //   <figure>
+    //     <img className="pt-5 rounded-lg" src={course_logo_image} alt="Shoes" />
+    //   </figure>
+    //   <p className="absolute right-0 px-4 mt-4 mr-4 text-white rounded-md bg-slate-900">
+    //     ${price}
+    //   </p>
 
-      <div className="flex flex-col items-center text-black card-body">
-        <h2 className="card-title">{course_name}</h2>
-        <div className="flex items-center gap-3">
-          <p>Instructor : {category}</p>
-          <p>Enroll : {enrolled_students}</p>
-        </div>
-        <p>Seats : {syllabus_info}</p>
+    //   <div className="text-black card-body">
+    //     <h2 className="card-title">{course_name}</h2>
+    //     <div className="flex items-center gap-3">
+    //       <p>Instructor : {category}</p>
+    //       <p>Enroll : {enrolled_students}</p>
+    //     </div>
+    //     <p>Seats : {syllabus_info}</p>
 
-        <button
-          onClick={() => handleLesson()}
-          className="pt-4 bg-indigo-600 border-0 border-b-4 border-orange-400 btn btn-outline card-actions"
-        >
-          Add to Course
-        </button>
+    //     <button
+    //       onClick={() => handleLesson()}
+    //       className="pt-4 bg-indigo-600 border-0 border-b-4 border-orange-400 btn btn-outline card-actions"
+    //     >
+    //       Add to Course
+    //     </button>
+    //   </div>
+    // </div>
+    <div className="flex flex-col gap-2 px-5 py-5 text-gray-700 bg-cyan-400 rounded-2xl">
+    <img className="w-96 rounded-t-2xl" src={course_logo_image} alt="" />
+    <div className="flex justify-between ">
+      <div className="flex items-center gap-2 ">
+        <h1 className="text-lg font-bold ">{rating}</h1>
+        <ReactStars
+          value={rating}
+          color1={"gray"}
+          size={20}
+          color2={"#ffd700"}
+        />
+        <h1>({reviews.length})</h1>
       </div>
+      <h1 className="text-xl font-bold ">{price}$</h1>
     </div>
+    <h1 className="text-xl ">{course_name}</h1>
+    <h1 className="text-sm">Category: {category}</h1>
+    <h1 className="text-base">Enrolled: {enrolled_students}</h1>
+    <div className="flex items-center justify-between ">
+      <div className="flex items-center gap-3 ">
+        <img
+          className="w-16 p-1 border-2 border-blue-900 rounded-full "
+          src={instructor_details.instructor_image}
+          alt=""
+        />
+        <h1>{instructor_details.instructor_name}</h1>
+      </div>
+      <button onClick={() => handleLesson()} className="btn btn-warning">
+        Add To Cart
+      </button>
+    </div>
+  </div>
   );
 };
 
