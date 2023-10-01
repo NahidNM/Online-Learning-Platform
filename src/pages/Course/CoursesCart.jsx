@@ -43,7 +43,7 @@ const CoursesCart = (props) => {
         enrolled_students,
         course_name,
       };
-      fetch("http://localhost:4000/cart", {
+      fetch("https://online-learning-platform-server-gold.vercel.appcart", {
         method: "POST",
         headers: {
           "content-type": "application/json",

@@ -18,7 +18,7 @@ const GoogleLogin = () => {
         role: "user",
         email: loggedInUser.email,
       };
-      fetch("http://localhost:4000/users", {
+      fetch("https://online-learning-platform-server-gold.vercel.appusers", {
         method: "POST",
         headers: {
           "content-type": "application/json",

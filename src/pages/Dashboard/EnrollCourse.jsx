@@ -5,7 +5,7 @@ const EnrollCourse = () => {
   const [courses, setCourses] = useState([]);
   console.log(courses);
   useEffect(() => {
-    fetch("http://localhost:4000/enroll")
+    fetch("https://online-learning-platform-server-gold.vercel.appenroll")
       .then((res) => res.json())
       .then((data) => setCourses(data));
   });
