@@ -1,39 +1,35 @@
- import { useContext } from "react";
+import { useContext } from "react";
 
 // import { useEffect } from "react";
 // import { FaSearch } from 'react-icons/fa';
-import { BsSearch } from 'react-icons/bs';
+import { BsSearch } from "react-icons/bs";
 import CoursesCart from "./CoursesCart";
-import { Dna } from 'react-loader-spinner'
+import { Dna } from "react-loader-spinner";
 import { AuthContext } from "../../Providers/AuthProvider";
-import React from 'react';
+import React from "react";
 // import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
-import { useState, useEffect } from 'react';
-
+import "react-tabs/style/react-tabs.css";
+import { useState, useEffect } from "react";
 
 const Course = () => {
-  
-  
   const [ALLCourse, setAllCoures] = useState([]);
   const [data, setData] = useState(ALLCourse);
-    const [ai, setAi] = useState([])
-    const [ui, setUi] = useState([])
-    const [Development, setDevelopment] = useState([])
-    const [app, setApp] = useState([])
-    const [science,  setScience] = useState([])
-    const [entry, setEntry] = useState([])
-  
-  
+  const [ai, setAi] = useState([]);
+  const [ui, setUi] = useState([]);
+  const [Development, setDevelopment] = useState([]);
+  const [app, setApp] = useState([]);
+  const [science, setScience] = useState([]);
+  const [entry, setEntry] = useState([]);
+
   useEffect(() => {
     fetch("http://localhost:4000/course")
       .then((res) => res.json())
       .then((data) => {
         setAllCoures(data);
-        setData(data);  
+        setData(data);
       });
   }, []);
-  
+
   // filter category
   const filter = (event) => {
     setData(
@@ -51,49 +47,48 @@ const Course = () => {
       )
     );
   };
-  
-  
+
   const CategoryHandler = (prop) => {
     setData(ALLCourse.filter((lesson) => lesson.category == prop));
     console.log(ALLCourse);
   };
 
-const handleALLCourse=()=>{
-    console.log(ALLCourse)
-   setData(ALLCourse)
-   console.log(data)
-}
+  const handleALLCourse = () => {
+    console.log(ALLCourse);
+    setData(ALLCourse);
+    console.log(data);
+  };
 
+  const RatingSOrter = () => {
+    const sortedData = [...data];
+    sortedData.sort((a, b) => b.rating - a.rating);
+    setData(sortedData);
+  };
+  const priceSOrter = () => {
+    const sortedData = [...data];
+    sortedData.sort((a, b) => b.price - a.price);
+    setData(sortedData);
+  };
 
-  
-const RatingSOrter = () => {
-  const sortedData=[...data]
-  sortedData.sort((a, b) => b.rating - a.rating);
-  setData(sortedData)
+  const { loading } = useContext(AuthContext);
 
-};
-const priceSOrter = () => {
-  const sortedData=[...data]
-  sortedData.sort((a, b) => b.price - a.price);
- setData(sortedData)
-};
-  
-    const { loading } = useContext(AuthContext);
-   
-      
-      if(loading){
-        return <div className='flex justify-around'><Dna
-        visible={true}
-        height="100"
-        width="180"
-        ariaLabel="dna-loading"
-        wrapperStyle={{}}
-        wrapperClass="dna-wrapper"
-      /></div>
-    }
-    
+  if (loading) {
     return (
-      <div className="md:px-10 ">
+      <div className="flex justify-around">
+        <Dna
+          visible={true}
+          height="100"
+          width="180"
+          ariaLabel="dna-loading"
+          wrapperStyle={{}}
+          wrapperClass="dna-wrapper"
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div className="md:px-10 ">
       {/* -------------------Search Bar-------------------------- */}
       <div className="flex items-center my-3 bg-cyan-400 rounded-xl md:mx-96">
         <input
@@ -114,7 +109,10 @@ const priceSOrter = () => {
             Find By Category :{" "}
           </h1>
           <div className="flex flex-wrap items-center gap-4">
-            <button className="btn btn-accent" onClick={() => handleALLCourse()}>
+            <button
+              className="btn btn-accent"
+              onClick={() => handleALLCourse()}
+            >
               All Courses
             </button>
             <button
@@ -154,8 +152,6 @@ const priceSOrter = () => {
               Data Entry
             </button>
           </div>
-          
-
 
           <h1 className="pt-3 text-xl font-semibold text-gray-700 ">
             Find By Tutor :{" "}
@@ -209,10 +205,14 @@ const priceSOrter = () => {
               className="dropdown-content z-[1] menu p-2 shadow bg-base-200 rounded-box w-20 md:w-44"
             >
               <li onClick={() => priceSOrter()}>
-                <a className="flex items-center"><span className="hidden md:block">Sort By</span> Price</a>
+                <a className="flex items-center">
+                  <span className="hidden md:block">Sort By</span> Price
+                </a>
               </li>
               <li onClick={() => RatingSOrter()}>
-              <a className="flex items-center"><span className="hidden md:block">Sort By</span> Rating</a>
+                <a className="flex items-center">
+                  <span className="hidden md:block">Sort By</span> Rating
+                </a>
               </li>
             </ul>
           </div>
@@ -230,10 +230,7 @@ const priceSOrter = () => {
         )}
       </div>
     </div>
-      
-
-    )  
-
+  );
 };
 
 export default Course;

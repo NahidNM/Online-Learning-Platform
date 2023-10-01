@@ -1,6 +1,4 @@
-import {
-    createBrowserRouter,
-  } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import ErrorPages from "../pages/ErrorPages/ErrorPages";
 import Main from "../Layout/Main";
 import Home from "../pages/Home/Home/Home";
@@ -11,49 +9,58 @@ import Instructor from "../pages/Intructor/Instructor";
 import MyCourse from "../pages/Dashboard/MyCourse";
 import Dashboard from "../Layout/Dashboard";
 import EnrollCourse from "../pages/Dashboard/EnrollCourse";
+import CourseVideo from "../pages/Dashboard/CourseVideo";
 
-
- export const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Main></Main>,
-      errorElement: <ErrorPages></ErrorPages>,
-      children : [
-        {
-            path: '/', 
-            element: <Home></Home>
-        },
-        {
-          path: 'login',
-          element:<Login></Login>
-        },{
-          path: 'signup',
-          element:<Signup></Signup>
-        },
-        {
-          path: 'courses',
-          element: <Course></Course>
-        },
-        {
-          path: 'instructor',
-          element: <Instructor></Instructor>
-        }
-        
-      ],
-    },
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Main></Main>,
+    errorElement: <ErrorPages></ErrorPages>,
+    children: [
       {
-        path: 'dashboard',
-        element: <privateRoute><Dashboard></Dashboard></privateRoute>,
-        children: [
-          {
-            path: 'mycourse',
-            element: <MyCourse></MyCourse>
-          },
-          {
-            path: 'enrollCourse',
-            element: <EnrollCourse></EnrollCourse>
-          }
-        ]
-      }
-    
-  ]);
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "login",
+        element: <Login></Login>,
+      },
+      {
+        path: "signup",
+        element: <Signup></Signup>,
+      },
+      {
+        path: "courses",
+        element: <Course></Course>,
+      },
+      {
+        path: "instructor",
+        element: <Instructor></Instructor>,
+      },
+    ],
+  },
+  {
+    path: "dashboard",
+    element: (
+      <privateRoute>
+        <Dashboard></Dashboard>
+      </privateRoute>
+    ),
+    children: [
+      {
+        path: "mycourse",
+        element: <MyCourse></MyCourse>,
+      },
+      {
+        path: "enrollCourse",
+        element: <EnrollCourse></EnrollCourse>,
+      },
+      {
+        path: 'video',
+        element: <CourseVideo></CourseVideo>
+        
+        
+      },
+    ],
+  },
+]);
