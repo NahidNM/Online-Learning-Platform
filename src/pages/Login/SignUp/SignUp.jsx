@@ -34,7 +34,7 @@ const Signup = () => {
 
           const saveUser = { name: data.name, email: data.email };
 
-          fetch("https://online-learning-platform-server-gold.vercel.appusers", {
+          fetch("https://online-learning-platform-server-gold.vercel.app/users", {
             method: "POST",
             headers: {
               "content-type": "application/json",

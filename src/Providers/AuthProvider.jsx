@@ -61,7 +61,7 @@ const AuthProvider = ({ children }) => {
       // get and set token
       if (currentUser) {
         axios
-          .post("https://online-learning-platform-server-gold.vercel.appjwt", { email: currentUser.email })
+          .post("https://online-learning-platform-server-gold.vercel.app/jwt", { email: currentUser.email })
           .then((data) => {
             // console.log(data.data.token)
             localStorage.setItem("access-token", data.data.token);

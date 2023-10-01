@@ -32,7 +32,7 @@ const MyCourseCart = (props) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://online-learning-platform-server-gold.vercel.appcart/${_id}`, {
+        fetch(`https://online-learning-platform-server-gold.vercel.app/cart/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -58,7 +58,7 @@ const MyCourseCart = (props) => {
       instructor_details,
       course_name,
     };
-    fetch("https://online-learning-platform-server-gold.vercel.appenroll", {
+    fetch("https://online-learning-platform-server-gold.vercel.app/enroll", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -68,7 +68,7 @@ const MyCourseCart = (props) => {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          fetch(`https://online-learning-platform-server-gold.vercel.appcart/${_id}`, {
+          fetch(`https://online-learning-platform-server-gold.vercel.app/cart/${_id}`, {
             method: "DELETE",
           })
             .then((res) => res.json())
