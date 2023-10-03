@@ -14,12 +14,12 @@ import { useState, useEffect } from "react";
 const Course = () => {
   const [ALLCourse, setAllCoures] = useState([]);
   const [data, setData] = useState(ALLCourse);
-  const [ai, setAi] = useState([]);
-  const [ui, setUi] = useState([]);
-  const [Development, setDevelopment] = useState([]);
-  const [app, setApp] = useState([]);
-  const [science, setScience] = useState([]);
-  const [entry, setEntry] = useState([]);
+  // const [ai, setAi] = useState([]);
+  // const [ui, setUi] = useState([]);
+  // const [Development, setDevelopment] = useState([]);
+  // const [app, setApp] = useState([]);
+  // const [science, setScience] = useState([]);
+  // const [entry, setEntry] = useState([]);
 
   useEffect(() => {
     fetch("https://online-learning-platform-server-gold.vercel.app/course")
