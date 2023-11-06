@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import GoggleLogin from "../SocialLogin/GoogleLogin";
 import { useState } from "react";
-import bg from "../../../../public/Login/bg.jpg";
+import bg from "../../../../public/Login/160_F_401828866_H9fhNotGOOkz1VI7dAJP0V142tpLilDq.jpg";
 
 const Signup = () => {
   const {
@@ -27,7 +27,7 @@ const Signup = () => {
     createUser(data.email, data.password)
       .then((result) => {
         const loggedUser = result.user;
-        console.log(loggedUser);
+        // console.log(loggedUser);
 
         updateUserProfile(data.name, data.photoURL).then(() => {
           console.log("user profile update");

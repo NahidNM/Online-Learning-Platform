@@ -74,7 +74,7 @@ const Course = () => {
 
   if (loading) {
     return (
-      <div className="flex justify-around">
+      <div className="flex justify-around pt-20">
         <Dna
           visible={true}
           height="100"

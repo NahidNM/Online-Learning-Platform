@@ -51,7 +51,7 @@ const Login = () => {
       className="bg-no-repeat bg-cover pd-16 md:p-20"
     >
     
-      <div className="relative md:mx-60 md:left-96">
+      <div className="relative md:mx-60 md:left-96 py-5">
         <div>
           <div className="flex flex-col gap-2 px-10 py-5 bg-gradient-to-r from-yellow-500 to-indigo-500 w-96 rounded-xl">
             <h1 className="text-3xl text-center text-white ">Login Here!!</h1>
