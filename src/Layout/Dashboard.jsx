@@ -48,7 +48,7 @@ const Dashboard = () => {
             {/* Sidebar content here */}
             <div>
               <li>
-                <Link to="/dashboard/userhome">
+                <Link to="/dashboard/UserHome">
                   <FaHome></FaHome> User Home
                 </Link>
               </li>
@@ -85,6 +85,9 @@ const Dashboard = () => {
               </NavLink>
             </li>
           </ul>
+          <div>
+            hello
+          </div>
         </div>
       </div>
     </>

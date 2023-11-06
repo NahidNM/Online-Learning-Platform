@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="p-10 footer bg-slate-300">
       <aside>
-        <h1 className="text-xl font-bold">E-Learnig</h1>
+        <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-700 to-pink-700 bg-clip-text text-transparent">E-Learning</h1>
         <p>
           ACME Industries Ltd.
           <br />

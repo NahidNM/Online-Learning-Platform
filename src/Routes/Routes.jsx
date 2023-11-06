@@ -10,6 +10,7 @@ import MyCourse from "../pages/Dashboard/MyCourse";
 import Dashboard from "../Layout/Dashboard";
 import EnrollCourse from "../pages/Dashboard/EnrollCourse";
 import CourseVideo from "../pages/Dashboard/CourseVideo";
+import UserHome from "../pages/Dashboard/UserHome";
 
 export const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ export const router = createBrowserRouter([
     ),
     children: [
       {
+        path: "UserHome",
+        element: <UserHome></UserHome>
+      },
+      {
         path: "mycourse",
         element: <MyCourse></MyCourse>,
       },
@@ -58,8 +63,6 @@ export const router = createBrowserRouter([
       {
         path: 'video',
         element: <CourseVideo></CourseVideo>
-        
-        
       },
     ],
   },

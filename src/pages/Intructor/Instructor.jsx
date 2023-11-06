@@ -28,7 +28,7 @@ const Instructor = () => {
     .map((course) => course.instructor_details);
 
   return (
-    <div className="my-10">
+    <div className="py-16">
       <div className="divider"></div>
       <div className="font-bold text-center text-blue-500 divider md:text-5xl">
         Our Instructor

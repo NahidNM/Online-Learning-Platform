@@ -3,7 +3,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 
-import bg from "../../../../public/Login/bg.jpg";
+import bg from "../../../../public/Login/photo-1616400619175-5beda3a17896.avif";
 import { useForm } from "react-hook-form";
 import GoggleLogin from "../SocialLogin/GoogleLogin";
 
@@ -51,9 +51,9 @@ const Login = () => {
       className="bg-no-repeat bg-cover pd-16 md:p-20"
     >
     
-      <div className="relative py-20 md:mx-60 md:left-44">
+      <div className="relative md:mx-60 md:left-96">
         <div>
-          <div className="flex flex-col gap-2 px-10 py-5 bg-blue-500 w-96 rounded-xl">
+          <div className="flex flex-col gap-2 px-10 py-5 bg-gradient-to-r from-yellow-500 to-indigo-500 w-96 rounded-xl">
             <h1 className="text-3xl text-center text-white ">Login Here!!</h1>
             <form
               onSubmit={handleSubmit(onSubmit)}

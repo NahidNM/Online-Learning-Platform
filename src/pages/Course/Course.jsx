@@ -88,9 +88,9 @@ const Course = () => {
   }
 
   return (
-    <div className="md:px-10 ">
+    <div className="pt-20 md:px-10">
       {/* -------------------Search Bar-------------------------- */}
-      <div className="flex items-center my-3 bg-cyan-400 rounded-xl md:mx-96">
+      <div className="flex items-center m-3 bg-cyan-400 rounded-xl md:mx-96">
         <input
           className="py-2 pl-3 pr-24 mx-2 my-2 rounded-xl "
           onChange={filter}
