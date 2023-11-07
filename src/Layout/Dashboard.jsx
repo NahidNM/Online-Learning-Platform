@@ -1,21 +1,14 @@
 // import { Helmet } from "react-helmet-async";
 import { Link, NavLink, Outlet } from "react-router-dom";
 import {
-  FaShoppingCart,
-  FaWallet,
-  FaCalendarAlt,
-  FaHome,
-  FaUtensils,
-  FaBook,
-  FaUsers,
-  FaCartPlus,
-} from "react-icons/fa";
+  FaShoppingCart, FaWallet,FaCalendarAlt,FaHome,FaUtensils,FaBook,FaUsers,FaCartPlus} from "react-icons/fa";
 import useCart from "../Hooks/useCart";
 import { MdClass } from "react-icons/md";
 import useAuth from "../Hooks/useAuth";
 
 const Dashboard = () => {
   const { user } = useAuth();
+  // console.log("das",user)
   // console.log(user?.photoURL);
   const [cart] = useCart();
 
@@ -43,7 +36,7 @@ const Dashboard = () => {
             <div className="mx-auto ">
               <img className="w-24 rounded-full " src={user?.photoURL} alt="" />
               <h1 className="font-semibold ">{user?.displayName}</h1>
-              <p className="">{user.email}</p>
+              <p className="">{user?.email}</p>
             </div>
             {/* Sidebar content here */}
             <div>

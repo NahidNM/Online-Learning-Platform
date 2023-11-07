@@ -36,7 +36,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "instructor",
-        element: <Instructor></Instructor>,
+        element: <privateRoute><Instructor></Instructor></privateRoute>,
       },
     ],
   },

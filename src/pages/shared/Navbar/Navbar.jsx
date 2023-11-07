@@ -19,7 +19,7 @@ const Navbar = () => {
 
   // Header item
   const navOption = (
-    <div className="items-center md:flex">
+    <div className="items-center gap-6 md:flex">
       <li>
         <NavLink
           to="/"
@@ -58,7 +58,7 @@ const Navbar = () => {
         </NavLink>
       </li>
 
-      <li>
+      <li className="">
         <Link to="/dashboard/mycourse">
           <button className="gap-2 btn-secondary btn">
             <FaShoppingCart></FaShoppingCart>
@@ -70,7 +70,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="fixed z-10 mx-auto bg-gradient-to-r from-gray-300 to-gray-500 md:max-w-screen-xl navbar md:py-0 md:px-10 opacity-90">
+    <div className="fixed z-10 h-3 mx-auto bg-gradient-to-r from-gray-300 to-gray-500 md:max-w-screen-xl navbar md:py-0 md:px-10 opacity-90">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -98,7 +98,7 @@ const Navbar = () => {
         </div>
         <div className="flex items-center gap-2">
           {/* <img src={logo} alt="" className="w-14" /> */}
-          <h1 className="hidden text-3xl font-bold normal-case  md:block bg-gradient-to-r from-purple-700 to-pink-700 bg-clip-text text-transparent">
+          <h1 className="hidden text-3xl font-bold text-transparent normal-case md:block bg-gradient-to-r from-purple-700 to-pink-700 bg-clip-text">
             E-Learning
           </h1>
         </div>
