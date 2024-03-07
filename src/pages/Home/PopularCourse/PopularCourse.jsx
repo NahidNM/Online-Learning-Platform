@@ -7,7 +7,7 @@ const PopularCourse = () => {
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
-    fetch("https://online-learning-platform-server-gold.vercel.app/course")
+    fetch("http://localhost:4000/course")
       .then((res) => res.json())
       .then((data) => setCourses(data));
   });
@@ -18,7 +18,7 @@ const PopularCourse = () => {
     <div className="pt-5 pb-10">
       <div className="divider"></div>
       <div className="font-bold text-center text-blue-500 divider md:text-5xl">
-        Popular Course
+       Our Popular Course
       </div>
       <div className="divider"></div>
 

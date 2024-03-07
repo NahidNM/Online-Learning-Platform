@@ -79,7 +79,6 @@ const Dashboard = () => {
             </li>
           </ul>
           <div>
-            hello
           </div>
         </div>
       </div>

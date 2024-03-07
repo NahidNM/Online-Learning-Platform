@@ -11,6 +11,8 @@ import Dashboard from "../Layout/Dashboard";
 import EnrollCourse from "../pages/Dashboard/EnrollCourse";
 import CourseVideo from "../pages/Dashboard/CourseVideo";
 import UserHome from "../pages/Dashboard/UserHome";
+import Payments from "../pages/Dashboard/PaymentMethod/Payments";
+import PrivateRoute from "../Providers/PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -36,16 +38,16 @@ export const router = createBrowserRouter([
       },
       {
         path: "instructor",
-        element: <privateRoute><Instructor></Instructor></privateRoute>,
+        element: <PrivateRoute><Instructor></Instructor></PrivateRoute>,
       },
     ],
   },
   {
     path: "dashboard",
     element: (
-      <privateRoute>
+      <PrivateRoute>
         <Dashboard></Dashboard>
-      </privateRoute>
+      </PrivateRoute>
     ),
     children: [
       {
@@ -57,8 +59,17 @@ export const router = createBrowserRouter([
         element: <MyCourse></MyCourse>,
       },
       {
+        path: "payments",
+        element: <Payments></Payments>
+      },
+      {
+        path: 'payments/:id',
+        element: <Payments></Payments>,
+        loader: (({params})=> fetch(`http://localhost:4000/addCourse/${params.id}`))
+      },
+      {
         path: "enrollCourse",
-        element: <EnrollCourse></EnrollCourse>,
+        element: <EnrollCourse></EnrollCourse>
       },
       {
         path: 'video',

@@ -6,7 +6,7 @@ const Instructor = () => {
   const [instuctors, setInstuctor] = useState([]);
 
   useEffect(() => {
-    fetch("https://online-learning-platform-server-gold.vercel.app/course")
+    fetch("http://localhost:4000/course")
       .then((res) => res.json())
       .then((data) => setInstuctor(data));
   });

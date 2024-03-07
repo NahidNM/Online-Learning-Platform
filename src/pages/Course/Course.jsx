@@ -22,7 +22,7 @@ const Course = () => {
   // const [entry, setEntry] = useState([]);
 
   useEffect(() => {
-    fetch("https://online-learning-platform-server-gold.vercel.app/course")
+    fetch("http://localhost:4000/course")
       .then((res) => res.json())
       .then((data) => {
         setAllCoures(data);
@@ -33,7 +33,7 @@ const Course = () => {
   // filter category
   const filter = (event) => {
     setData(
-      ALLCourse.filter((lesson) =>
+      ALLCourse?.filter((lesson) =>
         lesson.course_name.toLowerCase().includes(event.target.value)
       )
     );
@@ -42,14 +42,14 @@ const Course = () => {
   // filter tuitor
   const tutorhandler = (prop) => {
     setData(
-      ALLCourse.filter(
+      ALLCourse?.filter(
         (lesson) => lesson.instructor_details.instructor_name == prop
       )
     );
   };
 
   const CategoryHandler = (prop) => {
-    setData(ALLCourse.filter((lesson) => lesson.category == prop));
+    setData(ALLCourse?.filter((lesson) => lesson.category == prop));
     console.log(ALLCourse);
   };
 

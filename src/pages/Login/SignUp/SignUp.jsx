@@ -34,7 +34,7 @@ const Signup = () => {
 
           const saveUser = { name: data.name, email: data.email };
 
-          fetch("https://online-learning-platform-server-gold.vercel.app/users", {
+          fetch("http://localhost:4000/users", {
             method: "POST",
             headers: {
               "content-type": "application/json",
@@ -72,7 +72,7 @@ const Signup = () => {
       className="bg-no-repeat bg-cover md:p-20 hero"
     >
       <div className="flex-col md:pt-10 hero-content lg:flex-row-reverse w-96">
-        <div className="flex-shrink-0 w-full s hadow-2xl card bg-slate-500">
+        <div className="flex-shrink-0 shadow-2xl w-96 card bg-slate-500">
           <h1 className="mt-10 text-3xl font-semibold text-center">
             Please Register
           </h1>

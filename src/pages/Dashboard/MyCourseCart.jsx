@@ -2,6 +2,7 @@ import ReactStars from "react-stars";
 import Swal from "sweetalert2";
 import useAuth from "../../Hooks/useAuth";
 import useCart from "../../Hooks/useCart";
+import { Link, NavLink } from "react-router-dom";
 
 const MyCourseCart = (props) => {
   const [cart, refetch] = useCart();
@@ -32,7 +33,7 @@ const MyCourseCart = (props) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://online-learning-platform-server-gold.vercel.app/cart/${_id}`, {
+        fetch(`http://localhost:4000/cart/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -58,7 +59,7 @@ const MyCourseCart = (props) => {
       instructor_details,
       course_name,
     };
-    fetch("https://online-learning-platform-server-gold.vercel.app/enroll", {
+    fetch("http://localhost:4000/enroll", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -68,7 +69,7 @@ const MyCourseCart = (props) => {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          fetch(`https://online-learning-platform-server-gold.vercel.app/cart/${_id}`, {
+          fetch(`http://localhost:4000/cart/${_id}`, {
             method: "DELETE",
           })
             .then((res) => res.json())
@@ -116,12 +117,18 @@ const MyCourseCart = (props) => {
         >
           DELETE
         </button>
+        
+        {/* Enrool systems */}
+        
         <button
           onClick={() => handleEnroll()}
-          className="pt-4 bg-indigo-600 border-0 border-b-4 border-orange-400 btn btn-outline card-actions"
+          className="pt-4 bg-orange-500 border-0 border-b-4 border-indigo-600 btn btn-outline card-actions"
         >
-          ENROLL
+          Enroll
         </button>
+        
+        <Link to={`/dashboard/payments/${_id}`}> PAY</Link>
+        
       </div>
     </div>
   );
